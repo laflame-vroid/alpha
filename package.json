@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/styles": "^4.11.5",
     "@sanity/image-url": "^1.0.2",
     "@thirdweb-dev/react": "^3.10.1",
     "@thirdweb-dev/sdk": "^3.10.1",
