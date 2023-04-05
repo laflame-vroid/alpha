@@ -6,7 +6,6 @@ import { Collection } from "../../typings";
 import Link from "next/link";
 import { BigNumber } from "ethers";
 import toast, { Toaster } from "react-hot-toast";
-import { fontWeight } from "@mui/system";
 interface Props {
   collection: Collection;
 }
@@ -65,7 +64,6 @@ function NFTDropPage({collection}: Props) {
       style: {
         background: 'white',
         color: 'green',
-        fontWeight: 'bolder',
         fontSize: '17px',
         padding: '20px',
       }
@@ -83,7 +81,6 @@ function NFTDropPage({collection}: Props) {
       style: {
       background: 'green',
         color: 'white',
-        fontWeight: 'bolder',
         fontSize: '17px',
         padding: '20px',
       },
@@ -99,7 +96,6 @@ function NFTDropPage({collection}: Props) {
         style: {
           background: 'red',
           color: 'white',
-          fontWeight: 'bolder',
           fontSize: '17px',
           padding: '20px',
         }
