@@ -6,7 +6,6 @@ import { Collection } from "../../typings";
 import Link from "next/link";
 import { BigNumber } from "ethers";
 import toast, { Toaster } from "react-hot-toast";
-import { fontWeight } from "@mui/system";
 interface Props {
   collection: Collection;
 }
@@ -61,15 +60,7 @@ function NFTDropPage({collection}: Props) {
     const quantity = 1;
 
     setloading(true)
-    const notification = toast.loading('Minting...',{
-      style: {
-        background: 'white',
-        color: 'green',
-        fontWeight: 'bolder',
-        fontSize: '17px',
-        padding: '20px',
-      }
-    })
+    const notification = toast.loading('Minting...')
 
     nftDrop
     .claimTo(address, quantity)
@@ -78,16 +69,7 @@ function NFTDropPage({collection}: Props) {
      const claimedTokenId = tx[0].id 
      const claimedNFT = await tx[0].data()
 
-     toast('Minting Successful', {
-      duration: 8000,
-      style: {
-      background: 'green',
-        color: 'white',
-        fontWeight: 'bolder',
-        fontSize: '17px',
-        padding: '20px',
-      },
-     })
+     toast('Minting Successful')
 
      console.log(receipt)
      console.log(claimedTokenId)
@@ -95,16 +77,7 @@ function NFTDropPage({collection}: Props) {
     })
     .catch((err) => {
       console.log(err)
-      toast('Whoops... Something went wrong!', {
-        style: {
-          background: 'red',
-          color: 'white',
-          fontWeight: 'bolder',
-          fontSize: '17px',
-          padding: '20px',
-        }
-
-      })
+      toast('Whoops... Something went wrong!')
     })
     .finally(() => {
       setloading(false)
