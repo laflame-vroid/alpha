@@ -6,7 +6,6 @@ import { Collection } from "../../typings";
 import Link from "next/link";
 import { BigNumber } from "ethers";
 import toast, { Toaster } from "react-hot-toast";
-import { fontWeight } from "@mui/system";
 interface Props {
   collection: Collection;
 }
